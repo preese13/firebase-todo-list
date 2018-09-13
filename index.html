@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Some Bars</h1>
+    <div class="content">
+        
+        <form id="add-bar-form">
+            <input type="text" name="name" placeholder="bar name">
+            <input type="text" name="city" placeholder="bar city">
+            <button> add bar</button>
+        </form>
+
+        <ul id="cafe-list"></ul>
+    </div>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBw0hX0q_0QabfGPTxRJ3rAnq1-eJY8jXo",
+            authDomain: "fir-test-app-5b9c4.firebaseapp.com",
+            databaseURL: "https://fir-test-app-5b9c4.firebaseio.com",
+            projectId: "fir-test-app-5b9c4",
+            storageBucket: "fir-test-app-5b9c4.appspot.com",
+            messagingSenderId: "174678293088"
+        };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+        db.settings({
+            timestampsInSnapshots: true
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
